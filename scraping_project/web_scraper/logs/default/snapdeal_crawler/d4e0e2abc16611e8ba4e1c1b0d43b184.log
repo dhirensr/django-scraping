@@ -1,0 +1,69 @@
+2018-09-26 08:33:33 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: web_scraper)
+2018-09-26 08:33:33 [scrapy.utils.log] INFO: Versions: lxml 3.5.0.0, libxml2 2.9.3, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.2 (default, Nov 23 2017, 16:37:01) - [GCC 5.4.0 20160609], pyOpenSSL 18.0.0 (OpenSSL 1.0.2g  1 Mar 2016), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-09-26 08:33:33 [scrapy.crawler] INFO: Overridden settings: {'SPIDER_MODULES': ['web_scraper.spiders'], 'LOG_FILE': 'logs/default/snapdeal_crawler/d4e0e2abc16611e8ba4e1c1b0d43b184.log', 'BOT_NAME': 'web_scraper', 'NEWSPIDER_MODULE': 'web_scraper.spiders'}
+2018-09-26 08:33:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2018-09-26 08:33:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-26 08:33:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-26 08:33:33 [scrapy.middleware] INFO: Enabled item pipelines:
+['web_scraper.pipelines.WebScraperPipeline']
+2018-09-26 08:33:33 [scrapy.core.engine] INFO: Spider opened
+2018-09-26 08:33:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-26 08:33:33 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-09-26 08:33:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.snapdeal.com/search?keyword=oneplus%205&sort=rlvncy> (referer: None)
+2018-09-26 08:33:35 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/snapdeal_crawler.py:15: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('//div/div/a/p/text()'):
+
+2018-09-26 08:33:35 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/snapdeal_crawler.py:17: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('//div/a/@href'):
+
+2018-09-26 08:33:35 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/snapdeal_crawler.py:20: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('//div/a/picture/source/@srcset'):
+
+2018-09-26 08:33:35 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/snapdeal_crawler.py:22: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('//div/div/a/div/div/span[@class="lfloat product-price"]/text()'):
+
+2018-09-26 08:33:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.snapdeal.com/search?keyword=oneplus%205&sort=rlvncy>
+{'snapdeal': {0: (0, 'OPEN BOX OnePlus 5 (A5000) 64GB Slate Grey 6 GB RAM with DASH CHARGER (6 Month Brand Warranty)', 'Rs.  28,012', 'https://www.snapdeal.com/product/open-box-oneplus-5-64gb/662434427344', 'https://n3.sdlcdn.com/imgs/g/l/z/large/OPEN-BOX-OnePlus-5-64GB-SDL526025692-1-50fe3.jpeg'), 1: (1, 'OnePlus 5 Mirror Back Covers ELEF - Purple Shining Series Case One Angle One Color', 'Rs.  445', 'https://www.snapdeal.com/product/open-box-oneplus-5-64gb/662434427344', 'https://n2.sdlcdn.com/imgs/h/j/o/large/OnePlus-5-Mirror-Back-Covers-SDL456112882-1-31c98.jpg'), 2: (2, 'OnePlus 5 Shock Proof Case B.kcreationsz - Black', 'Rs.  198', 'https://www.snapdeal.com/product/open-box-oneplus-5-64gb/662434427344', 'https://n3.sdlcdn.com/imgs/g/i/6/large/OnePlus-5-Shock-Proof-Case-SDL879392701-1-d309c.jpg'), 3: (3, 'OnePlus 5 Soft Silicon Cases Galaxy Plus - Transparent', 'Rs.  169', 'https://www.snapdeal.com/product/oneplus-5-mirror-back-covers/639356506239', 'https://n3.sdlcdn.com/imgs/f/4/p/large/OnePlus-5-Soft-Silicon-Cases-SDL742314349-1-2ca98.jpg'), 4: (4, 'OnePlus 5 Plain Cases 2Bro - Black', 'Rs.  445', 'https://www.snapdeal.com/product/oneplus-5-mirror-back-covers/639356506239', 'https://n3.sdlcdn.com/imgs/f/8/i/large/OnePlus-5-Plain-Cases-2Bro-SDL892417385-1-43083.jpg'), 5: (5, 'OnePlus 5 Shock Proof Case JMA - Red', 'Rs.  449', 'https://www.snapdeal.com/product/oneplus-5-mirror-back-covers/639356506239', 'https://n4.sdlcdn.com/imgs/g/q/6/large/OnePlus-5-Shock-Proof-Case-SDL615671426-1-4a7e7.jpg'), 6: (6, 'OnePlus 5 Plain Cases 2Bro - Black', 'Rs.  269', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/677409142892', 'https://n2.sdlcdn.com/imgs/f/2/b/large/OnePlus-5-Plain-Cases-2Bro-SDL344844430-1-7fb8e.jpg'), 7: (7, 'OnePlus 5 Plain Cases Coverage - Transparent', 'Rs.  229', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/677409142892', 'https://n3.sdlcdn.com/imgs/g/h/v/large/OnePlus-5-Plain-Cases-Coverage-SDL411341497-1-43e50.jpg'), 8: (8, 'OnePlus 5 Printed Cover By Noise', 'Rs.  329', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/677409142892', 'https://n3.sdlcdn.com/imgs/f/0/e/large/OnePlus-5-Printed-Cover-By-SDL814035309-1-c9f37.jpg'), 9: (9, 'OnePlus 5 Plain Cases 2Bro - Red', 'Rs.  499', 'https://www.snapdeal.com/product/oneplus-5-soft-silicon-cases/620870803699', 'https://n4.sdlcdn.com/imgs/f/8/i/large/OnePlus-5-Plain-Cases-2Bro-SDL905782155-1-706b9.jpg'), 10: (10, 'OnePlus 5 Plain Cases Cellmate - Black', 'Rs.  221', 'https://www.snapdeal.com/product/oneplus-5-soft-silicon-cases/620870803699', 'https://n1.sdlcdn.com/imgs/g/6/y/large/OnePlus-5-Plain-Cases-Cellmate-SDL847916596-1-ab208.jpeg'), 11: (11, 'OnePlus 5 Plain Cases Cell First - Yellow', 'Rs.  299', 'https://www.snapdeal.com/product/oneplus-5-soft-silicon-cases/620870803699', 'https://n3.sdlcdn.com/imgs/f/7/q/large/OnePlus-5-Plain-Cases-Cell-SDL213091718-1-03c20.jpg'), 12: (12, 'Oneplus 5t Soft Silicon Cases Wow Imagine - Black', 'Rs.  721', 'https://www.snapdeal.com/product/oneplus-5-plain-cases-2bro/669158999152', 'https://n4.sdlcdn.com/imgs/g/s/7/large/Oneplus-5t-Soft-Silicon-Cases-SDL780118900-1-c2fd0.jpg'), 13: (13, 'OnePlus OnePlus 5 Printed Cover By PIKWAY', 'Rs.  249', 'https://www.snapdeal.com/product/oneplus-5-plain-cases-2bro/669158999152', 'https://n3.sdlcdn.com/imgs/g/f/s/large/OnePlus-OnePlus-5-Printed-Cover-SDL073519799-1-e9822.jpg'), 14: (14, 'Oneplus 5T 3D Back Covers By Printland', 'Rs.  199', 'https://www.snapdeal.com/product/oneplus-5-plain-cases-2bro/669158999152', 'https://n2.sdlcdn.com/imgs/g/x/d/large/Oneplus-5T-3D-Back-Covers-SDL849551583-1-ea397.jpg'), 15: (15, 'OnePlus 5 Plain Cases 2Bro - Black', 'Rs.  499', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/662143970495', 'https://n2.sdlcdn.com/imgs/f/8/i/large/OnePlus-5-Plain-Cases-2Bro-SDL881991058-1-783bf.jpg'), 16: (16, 'Oneplus 5T Plain Cases Winsome - Black', 'Rs.  240', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/662143970495', 'https://n1.sdlcdn.com/imgs/g/8/m/large/Oneplus-5T-Plain-Cases-Winsome-SDL396930099-1-f1b96.jpg'), 17: (17, 'Oneplus 5T Flip Cover by iMob - Black', 'Rs.  1,005', 'https://www.snapdeal.com/product/oneplus-5-shock-proof-case/662143970495', 'https://n2.sdlcdn.com/imgs/g/t/p/large/Oneplus-5T-Flip-Cover-by-SDL275578174-1-7cec5.jpg'), 18: (18, 'Oneplus 5t Hybrid Covers BBR - Black', 'Rs.  414', 'https://www.snapdeal.com/product/oneplus-5-plain-cases-2bro/683546958224', 'https://n4.sdlcdn.com/imgs/g/v/h/large/Oneplus-5t-Hybrid-Covers-BBR-SDL949762607-1-11796.jpg'), 19: (19, 'OnePlus 5 Cover Combo by N+ INDIA', 'Rs.  714', 'https://www.snapdeal.com/product/oneplus-5-plain-cases-2bro/683546958224', 'https://n4.sdlcdn.com/imgs/g/b/7/large/OnePlus-5-Cover-Combo-by-SDL871944314-1-d84d7.jpg')}}
+2018-09-26 08:33:35 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-26 08:33:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 253,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 48109,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 26, 8, 33, 35, 747899),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 4,
+ 'memusage/max': 71057408,
+ 'memusage/startup': 71057408,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 9, 26, 8, 33, 33, 629838)}
+2018-09-26 08:33:35 [scrapy.core.engine] INFO: Spider closed (finished)

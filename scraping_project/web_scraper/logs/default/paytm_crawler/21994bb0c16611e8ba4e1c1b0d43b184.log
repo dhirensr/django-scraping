@@ -1,0 +1,69 @@
+2018-09-26 08:28:28 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: web_scraper)
+2018-09-26 08:28:28 [scrapy.utils.log] INFO: Versions: lxml 3.5.0.0, libxml2 2.9.3, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.2 (default, Nov 23 2017, 16:37:01) - [GCC 5.4.0 20160609], pyOpenSSL 18.0.0 (OpenSSL 1.0.2g  1 Mar 2016), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-09-26 08:28:28 [scrapy.crawler] INFO: Overridden settings: {'SPIDER_MODULES': ['web_scraper.spiders'], 'LOG_FILE': 'logs/default/paytm_crawler/21994bb0c16611e8ba4e1c1b0d43b184.log', 'BOT_NAME': 'web_scraper', 'NEWSPIDER_MODULE': 'web_scraper.spiders'}
+2018-09-26 08:28:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-09-26 08:28:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-26 08:28:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-26 08:28:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['web_scraper.pipelines.WebScraperPipeline']
+2018-09-26 08:28:28 [scrapy.core.engine] INFO: Spider opened
+2018-09-26 08:28:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-26 08:28:28 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-09-26 08:28:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://paytmmall.com/shop/search?q=oneplus%205&from=organic&child_site_id=6&site_id=2&category=66781> (referer: None)
+2018-09-26 08:28:29 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/paytm_crawler.py:15: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('.//div/div/div/a/div/div/text()'):
+
+2018-09-26 08:28:29 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/paytm_crawler.py:18: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('.//div/div/div/a/div/div/div/text()'):
+
+2018-09-26 08:28:29 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/paytm_crawler.py:20: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('.//div/div/div/a/div/img/@src'):
+
+2018-09-26 08:28:29 [py.warnings] WARNING: /home/dhirensr/scraping_project/web_scraper/web_scraper/spiders/paytm_crawler.py:22: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for d in items.select('.//div/div/div/a/@href'):
+
+2018-09-26 08:28:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://paytmmall.com/shop/search?q=oneplus%205&from=organic&child_site_id=6&site_id=2&category=66781>
+{'paytm': {0: (0, 'OnePlus 5T 64 GB (Midnight Black)', '24,999', 'www.paytmmall.com/oneplus-5t-64-gb-midnight-black-MOBONEPLUS-5T-6MYDI35059853BF9C1-pdp?product_id=205093166&src=search-grid&use_mw=1&tracker=organic%7C%7Coneplus%205%7Cgrid%7CSearch%7C%7C1%7Cproduction&site_id=2&child_site_id=6', 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBONEPLUS-5T-6MYDI35059853BF9C1/0..jpg?imwidth=282&impolicy=hq'), 1: (1, 'Smartron T-phone T5511 with transparent back  ...', '24,999', 'www.paytmmall.com/smartron-tphone-t5511-classic-grey-MOBSMARTRON-TPHGN_S26787892090AB-pdp?product_id=79569789&src=search-grid&use_mw=1&tracker=organic%7C%7Coneplus%205%7Cgrid%7CSearch%7C%7C2%7Cproduction&site_id=2&child_site_id=6', 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBSMARTRON-TPHGN_S26787892090AB/a_0..jpg?imwidth=282&impolicy=hq'), 2: (2, 'Smartron T-phone T5511 with transparent back  ...', '24,999', 'www.paytmmall.com/smartron-tphone-t5511-metallic-pink-MOBSMARTRON-TPHGN_S26787D493926-pdp?product_id=79569790&src=search-grid&use_mw=1&tracker=organic%7C%7Coneplus%205%7Cgrid%7CSearch%7C%7C3%7Cproduction&site_id=2&child_site_id=6', 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBSMARTRON-TPHGN_S26787D493926/a_6..jpg?imwidth=282&impolicy=hq')}}
+2018-09-26 08:28:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-26 08:28:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 291,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 81102,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 26, 8, 28, 29, 834218),
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 4,
+ 'memusage/max': 71102464,
+ 'memusage/startup': 71102464,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 9, 26, 8, 28, 28, 649260)}
+2018-09-26 08:28:29 [scrapy.core.engine] INFO: Spider closed (finished)

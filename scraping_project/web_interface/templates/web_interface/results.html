@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %} Search {% endblock %}
+
+{% block head %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet">
+<link href="{% static 'css/articles.css' %}" rel="stylesheet">
+<script src="{% static 'js/search.js' %}"></script>
+{% endblock head %}
+
+{% block main %}
+<div class="page-header">
+    <div class="row">
+        <div class="col-md-3">
+            <h1 align="center">{% trans 'Search Results' %}</h1>
+            {% if results %}
+            <section class="articles">
+                {% for result in results %}
+                <article>
+                    <h2><a href="{{result.3}}" target="_blank">{{result.1}}</a></h2>
+                    <div class="content">
+                        {{ result.1 }} + {{result.2}}
+                    </div>
+                </article>
+                {% endfor %}
+            </section>
+        </div>
+        {% else %}
+        <h4 class="no-result">{% trans 'No Product found' %} :(</h4>
+        {% endif %}
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        {% include 'paginator.html' with paginator=results q=querystring %}
+    </div>
+</div>
+
+{% endblock main %}

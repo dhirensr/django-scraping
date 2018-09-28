@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<h2 align="center">{% trans 'Profiles' %}</h2>
+{% if results %}
+<ul class="articles-results">
+    {% for profile in results %}
+    <h4><a href="/enterdata/profile/{{ profile.id }}">AF</a></h4>
+    <div class="article-content">
+        {{ profile.first_name}}
+        {{ profile.last_name}}</div>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h4 class="no-result">{% trans 'No Profile found' %} :(</h4>
+{% endif %}

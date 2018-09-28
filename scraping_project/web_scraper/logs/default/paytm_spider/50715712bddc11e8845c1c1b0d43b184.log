@@ -1,0 +1,54 @@
+2018-09-21 20:24:20 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: web_scraper)
+2018-09-21 20:24:20 [scrapy.utils.log] INFO: Versions: lxml 3.5.0.0, libxml2 2.9.3, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.2 (default, Nov 23 2017, 16:37:01) - [GCC 5.4.0 20160609], pyOpenSSL 18.0.0 (OpenSSL 1.0.2g  1 Mar 2016), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-09-21 20:24:20 [scrapy.crawler] INFO: Overridden settings: {'LOG_FILE': 'logs/default/paytm_spider/50715712bddc11e8845c1c1b0d43b184.log', 'BOT_NAME': 'web_scraper', 'NEWSPIDER_MODULE': 'web_scraper.spiders', 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', 'SPIDER_MODULES': ['web_scraper.spiders'], 'ROBOTSTXT_OBEY': True}
+2018-09-21 20:24:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2018-09-21 20:24:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-21 20:24:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-21 20:24:20 [scrapy.middleware] INFO: Enabled item pipelines:
+['web_scraper.pipelines.WebScraperPipeline']
+2018-09-21 20:24:20 [scrapy.core.engine] INFO: Spider opened
+2018-09-21 20:24:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-21 20:24:20 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-09-21 20:24:20 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/engine.py", line 127, in _next_request
+    request = next(slot.start_requests)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/spiders/__init__.py", line 83, in start_requests
+    yield Request(url, dont_filter=True)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/http/request/__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/http/request/__init__.py", line 56, in _set_url
+    raise TypeError('Request url must be str or unicode, got %s:' % type(url).__name__)
+TypeError: Request url must be str or unicode, got NoneType:
+2018-09-21 20:24:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-21 20:24:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 21, 20, 24, 20, 508817),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 70594560,
+ 'memusage/startup': 70594560,
+ 'start_time': datetime.datetime(2018, 9, 21, 20, 24, 20, 498281)}
+2018-09-21 20:24:20 [scrapy.core.engine] INFO: Spider closed (finished)
