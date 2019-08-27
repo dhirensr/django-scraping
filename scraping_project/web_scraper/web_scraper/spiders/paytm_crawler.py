@@ -11,17 +11,17 @@ class PaytmCrawlerSpider(scrapy.Spider):
     def parse(self, response):
         items=response.xpath('//*[@id="app"]/div/div[3]/div/div/div[3]/div[2]')
         items_name,items_src,items_img,items_price=([] for i in range(4))
-        for d in items.select('.//div/div/div/a/div/div/text()'):
-            if 'Cashback' not in d.extract():
-                items_name.append(d.extract())
-        for d in items.select('.//div/div/div/a/div/div/div/text()'):
-            items_price.append(d.extract())
-        for d in items.select('.//div/div/div/a/div/img/@src'):
-            items_img.append(d.extract())
-        for d in items.select('.//div/div/div/a/@href'):
-            items_src.append('https://www.paytmmall.com'+d.extract())
+        for d in items.xpath('.//div/div/div/a/div/div/text()').getall():
+            if d!='Cashback':
+                items_name.append(d)
+        for d in items.xpath('.//div/div/div/a/div/div/div/text()').getall():
+            items_price.append(d)
+        for d in items.xpath('.//div/div/div/a/div/img/@src').getall():
+            items_img.append(d)
+        for d in items.xpath('.//div/div/div/a/@href').getall():
+            items_src.append('https://www.paytmmall.com'+d)
         items_list=list(zip(list(range(len(items_name))),items_name,items_price,items_src,items_img))
-        #print(len(items_name),len(items_price),len(items_src),len(items_img))
+        print(len(items_name),len(items_price),len(items_src),len(items_img))
         items_dict = {}
         for i in items_list:
             items_dict[i[0]]=i

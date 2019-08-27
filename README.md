@@ -14,7 +14,8 @@ I have used 2 spiders for crawling the data and then django is used for displayi
 ## Deployment
 
 To deploy locally,
+* DB used is MYSQL and it should be configured and password for the database in picked via environment variable $DB_PASSWORD
 * python3 manage.py makemigrations
 * python3 manage.py migrate
-* simultaneously run scrapyd
+* ON a new tab in terminal change directory to /django-scraping/scraping_project/web_scraper and then run scrapyd
 * python3 manage.py runserver

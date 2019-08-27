@@ -14,7 +14,8 @@ BOT_NAME = 'web_scraper'
 SPIDER_MODULES = ['web_scraper.spiders']
 NEWSPIDER_MODULE = 'web_scraper.spiders'
 
-sys.path.append('/home/dhirensr/scraping_project')
+
+sys.path.append(os.getcwd())
 os.environ['DJANGO_SETTINGS_MODULE'] = 'scraping_project.settings'
 
 

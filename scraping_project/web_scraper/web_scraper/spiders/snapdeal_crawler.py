@@ -11,15 +11,15 @@ class SnapdealCrawlerSpider(scrapy.Spider):
     def parse(self,response):
         items=response.xpath('//*[@id="products"]')
         items_name,items_src,items_img,items_price=([] for i in range(4))
-        for d in items.select('//div/div/a/p/text()'):
-            items_name.append(d.extract())
-        for d in items.select('//div/a/@href'):
-            if self.search_data.split()[0] in d.extract():
-                items_src.append(d.extract())
-        for d in items.select('//div/a/picture/source/@srcset'):
-            items_img.append(d.extract())
-        for d in items.select('//div/div/a/div/div/span[@class="lfloat product-price"]/text()'):
-            items_price.append(d.extract())
+        for d in items.xpath('//div/div/a/p/text()').getall():
+            items_name.append(d)
+        for d in items.xpath('//div/a/@href').getall():
+            if self.search_data.split()[0] in d:
+                items_src.append(d)
+        for d in items.xpath('//div/a/picture/source/@srcset').getall():
+            items_img.append(d)
+        for d in items.xpath('//div/div/a/div/div/span[@class="lfloat product-price"]/text()').getall():
+            items_price.append(d)
 
         items_list=list(zip(list(range(len(items_name))),items_name,items_price,items_src[:len(items_name)],items_img))
         items_dict = {}
