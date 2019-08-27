@@ -7,8 +7,8 @@ I have used 2 spiders for crawling the data and then django is used for displayi
 ### Prerequisites
 
 * Python3
-* Scrapy
-* Scrapyd
+* Scrapy(1.7.3)
+* Scrapyd(1.2.1)
 * JSONField (Django)
 
 ## Deployment
